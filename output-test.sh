@@ -2,10 +2,11 @@
 
 set -x
 
-/bin/cat <<EOM >output.txt
-this
-file
-contains
-build
-output
+/bin/cat <<EOM >output.yaml
+this:
+  - is
+  - a
+  - test
+  - output
+  - yaml
 EOM
