@@ -3,7 +3,6 @@
 set -x
 
 /bin/cat <<EOM >manifest.yaml
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -55,7 +54,6 @@ spec:
         - name: mysql-persistent-storage
           persistentVolumeClaim:
             claimName: mysql-pv-claim
----
 apiVersion: v1
 kind: PersistentVolume
 metadata:
@@ -71,7 +69,6 @@ spec:
     - ReadWriteOnce
   hostPath:
     path: "/mnt/data"
----
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
